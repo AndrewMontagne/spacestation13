@@ -9,6 +9,7 @@
 	var/product_name = "generic"
 	var/product_path = null
 	var/amount = 0
+	var/maxamount = 0
 	var/display_color = "blue"
 
 /obj/machinery/vending/New()
@@ -71,10 +72,12 @@
 
 		if(hidden)
 			R.amount = rand(1,6)
+			R.maxamount = R.amount
 			src.hidden_records += R
 
 		else
 			R.amount = text2num(amt_list[p])
+			R.maxamount = R.amount
 			src.product_records += R
 
 		del(temp)
@@ -255,6 +258,18 @@
 
 	if(src.seconds_electrified > 0)
 		src.seconds_electrified--
+
+	//Slowly restock the vending machine
+	if(world.time > (src.lastrestock + src.restockdelay))
+		//src.speak("[src.restockdelay] ticks have passed")
+		src.lastrestock = world.time
+		for(var/datum/data/vending_product/R in src.product_records)
+			if (R.amount < R.maxamount)
+				R.amount++;
+				//src.speak("Restocked 1 [R.product_name].")
+				src.updateUsrDialog()
+				return
+	return
 
 	//Pitch to the people!  Really sell it!
 	if(prob(5) && ((src.last_slogan + src.slogan_delay) <= world.time) && (src.slogan_list.len > 0))

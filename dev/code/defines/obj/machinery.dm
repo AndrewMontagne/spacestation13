@@ -540,6 +540,8 @@
 	var/last_reply = 0
 	var/last_slogan = 0 //When did we last pitch?
 	var/slogan_delay = 600 //How long until we can pitch again?
+	var/lastrestock = 0//When did we last restock?
+	var/restockdelay = 1200//Restock timer
 	var/icon_vend //Icon_state when vending!
 	var/icon_deny //Icon_state when vending!
 	var/emagged = 0 //Ignores if somebody doesn't have card access to that machine.
