@@ -1,0 +1,12 @@
+#summary Planned changes for Scientists and Chemists
+#labels toxins,scientists,plans
+
+= Introduction =
+
+While sharing the same area, Chemists have a lot they can do, while Scientists are usually left alone to make bombs, bombs, and more bombs. These are the plans to combine the two jobs and resulting area into a single job heading.
+
+
+= Details =
+
+*Area Changes*
+  * The Toxins area will be rebuilt and renamed to Research Lab. Current plans are to enlarge it even more, and have it set up as separate rooms which can be sealed off, so that an accident in one room does not break everything. 
