@@ -9,4 +9,11 @@ While sharing the same area, Chemists have a lot they can do, while Scientists a
 = Details =
 
 *Area Changes*
-  * The Toxins area will be rebuilt and renamed to Research Lab. Current plans are to enlarge it even more, and have it set up as separate rooms which can be sealed off, so that an accident in one room does not break everything. 
+  * The Toxins area will be rebuilt and renamed to Research Lab. Current plans are to enlarge it even more, and have it set up as separate rooms which can be sealed off, so that an accident in one room does not break everything.
+  * There will be 6 rooms, with most walls being reinforced glass : 
+    * Chemistry Room 1
+    * Chemistry Room 2
+    * Research Lab
+    * Gas Mixing Room
+    * Gas Storage
+    * Monkey Storage
