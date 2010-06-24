@@ -633,3 +633,13 @@
 	var/gibtime = 40 // Time from starting until meat appears
 	var/mob/occupant // Mob who has been put inside
 
+/obj/machinery/hydroponics
+	name = "Hydroponics Tray"
+	desc = "Grows plants without soil using a substrate and synthetic nutrients."
+	icon = 'hydroponics.dmi'
+	icon_state = "hydrotray"
+	density = 1
+	anchored = 1
+	var/waterlevel = 0 // The amount of water in the tray (max 100)
+	var/nutrilevel = 0 // The amount of nutrient in the tray (max 10)
+	var/growthcycle = 0 // Current growth cycle
