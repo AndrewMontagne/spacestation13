@@ -18,7 +18,7 @@ The idol is meant to be something common and picked up regularly. This is how th
   * Tazer Gun
   * Crowbar
   * Stun Baton
-  * ElectroMagnet Card
+  * Electromagnet Card
   * Welder
 
 *Possessing*
