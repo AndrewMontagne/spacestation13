@@ -570,6 +570,15 @@
 	product_slogans = "Try our new nougat bar!;Twice the calories for half the price!"
 	product_hidden = "/obj/item/weapon/reagent_containers/food/snacks/donut"
 
+/obj/machinery/vending/seed
+	name = "Seed Vendor"
+	desc = "Vends seeds."
+	icon_state = "generic"
+	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/eggplantseed"
+	product_amounts = "10;10"
+	product_slogans = "Grow bigger veg! Only with Veg-B-Big!"
+	product_hidden = ""
+
 /obj/machinery/vending/cigarette
 	name = "cigarette machine"
 	desc = "If you want to get cancer, might as well do it in style"
@@ -635,7 +644,6 @@
 
 /obj/machinery/hydroponics
 	name = "Hydroponics Tray"
-	desc = "Grows plants without soil using a substrate and synthetic nutrients."
 	icon = 'hydroponics.dmi'
 	icon_state = "hydrotray"
 	density = 1
@@ -647,3 +655,5 @@
 	var/b_amount = 0 //Temp value
 	var/lastcycle = 0 //Used for timing of cycles.
 	var/cycledelay = 100 // About 10 seconds / cycle
+	var/planted = 0 // Is it occupied?
+	var/obj/item/seeds/myseed = null // The currently planted seed
