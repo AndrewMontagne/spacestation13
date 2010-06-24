@@ -34,8 +34,9 @@ Mutations have a chance of happening when the seed is planted, and effect all re
   * *E-Z-Nutrient* : The basic solution, has 0 modifiers across the board.
   * *Left 4 Zed* : Doubles the chance of a mutation at the cost of yield and potency chance.
 
-*Growth Cycle*
-  # If the seed was just planted, tick its growth indicator..
+*Growth Cycle* : Each growth cycle is about 10 seconds in game.
+  # If the seed was just planted, tick its growth indicator.
+  # If the seed was just planted, check mutation chance. If successfull, change the plant accordingly.
   # If nutrient was just added, reset the nutrient indicator.
   # If the nutrient indicator hits 1, flag the Plant Tank with N.
   # Subtract 1-10 water from the tank.
