@@ -1,0 +1,42 @@
+#summary Planned creation of our own Hydroponics system
+
+= Introduction =
+
+Hydroponics is growing plants without soil, using only water and nutrients. In SS13, they will be grown for food, air, medicinal herbs, research, and recreation. 
+
+
+= Details =
+
+*Basic Equipment*
+  * *Plant Tank* : This is basically a square tank of water on the floor where most of the action takes place. Holds 100 water units.
+  * *Seed Dispenser* : Says what it does. Carries 10 of each seed.
+  * *Plant Analyzer* : Scans a plant and displays properties.
+  * *Water Tank* : Supplies water.
+  * *Bucket* : Transports water in units of 50.
+  * *Nutrient solutions* : Various bottled nutrients that effect plants in different ways.
+
+*Seed Properties* : These are properties plants may have, which effect the growing time and end product.
+  * *Lifespan* : How many 'growth cycles' a plant is expected to live. Minimum of 3 growth cycles. Maximum of 15 growth cycles.
+  * *Endurance* : Overall health of the plant. It is effected by lack of nutrients and water. Higher endurance, means it can survive harsh conditions longer. Minimum 1. Maximum 100.
+  * *Maturation Rate* : How many 'growth cycles' it takes to go from planting to full plant. Minimum is 3.
+  * *Productio Rate* : How many growth cycles it takes to be harvestable after it reaches full growth. Minimum 1.
+  * *Yield* : How many end products you can gain when harvesting. Minimum 0. Maximum 10.
+  * *Potency* : How potent an item is. Always starts at 0. Maximum of 100. Only effects certain products : chili peppers, spinach, medicinal herbs, weed to start with.
+
+*Seeds and Mutations* : Here is a list of seeds and their mutations, plus an explanation of each. 
+
+Mutations have a chance of happening when the seed is planted, and effect all resulting products and seeds. If you get an ice pepper mutation, all subsequent plants from that harvest and seeds will be ice peppers.
+  * *Chili Seed* : Your basic hot pepper.
+    * *Special Property - Spiciness* : Hotter peppers have a better chance of causing burning damage to someone. At 50-75 potency, a chili will have a chance of causing temporary vision loss. At max potency (100), the chili has a 1% chance of causing someone to explode like a small bomb.
+  * *Mutation - Ice Pepper* : 1/20 chance. Instead of heat damage, causes cold damage. At 100 potency, the person will have a chance of some sort of insane death.
+
+*Nutrient Solutions* : Each solution is good for 10 growth cycles.
+  * *E-Z-Nutrient* : The basic solution, has 0 modifiers across the board.
+  * *Left 4 Zed* : Doubles the chance of a mutation at the cost of yield and potency chance.
+
+*Growth Cycle*
+  # If the seed was just planted, tick its growth indicator..
+  # If nutrient was just added, reset the nutrient indicator.
+  # If the nutrient indicator hits 1, flag the Plant Tank with N.
+  # Subtract 1-10 water from the tank.
+  # IF the water is below 10, flag the Plant Tank with W.
