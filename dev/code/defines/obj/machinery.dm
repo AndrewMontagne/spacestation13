@@ -640,6 +640,10 @@
 	icon_state = "hydrotray"
 	density = 1
 	anchored = 1
+	var/active = 0 // Is it active?
 	var/waterlevel = 0 // The amount of water in the tray (max 100)
 	var/nutrilevel = 0 // The amount of nutrient in the tray (max 10)
 	var/growthcycle = 0 // Current growth cycle
+	var/b_amount = 0 //Temp value
+	var/lastcycle = 0 //Used for timing of cycles.
+	var/cycledelay = 100 // About 10 seconds / cycle

@@ -199,6 +199,7 @@
 #include "code\defines\obj\injector.dm"
 #include "code\defines\obj\machinery.dm"
 #include "code\defines\obj\radio.dm"
+#include "code\defines\obj\seeds.dm"
 #include "code\defines\obj\spawner.dm"
 #include "code\defines\obj\storage.dm"
 #include "code\defines\obj\weapon.dm"
