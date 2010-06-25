@@ -68,3 +68,22 @@ Mutations have a chance of happening when the seed is planted, and effect all re
   # Subtract 1-6 water from the tank.
   # IF the water is below 10, flag the Plant Tank with W.
   # If plant is still growing, adjust seed properties appropriately.
+  # Check for damage
+    * If water is below 1-10, -1 from Health (derived from Endurance)
+    * If water is 0, -3 from Health
+    * If nutrient indicator is 0, -3 from Health
+  # If plant health hits 0, kill plant.
+
+*FILE DETAILS*
+
+Each seed and plant should preferably be named the following :
+  * *Seed* : seed-(plant. IE : seed-chili, seed-eggplant
+  * *Seedling* : (plant)-grow1. IE : chili-grow1 
+  * *Grow Stage 1* : (plant)-grow2
+  * *Grow Stage 2* : (plant)-grow3
+  * *Grow Stage 3* : (plant)-grow4
+  * *Grow Stage 4* : (plant)-grow5
+  * *Full Growth* : (plant)-grow6
+    * These 6 represent the 'maximum' number of grow stages for a plant.
+  * *Harvest Ready* : (plant)-harvest
+  * *Dead* : (plant)-dead
