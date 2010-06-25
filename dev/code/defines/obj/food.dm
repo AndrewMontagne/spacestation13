@@ -140,6 +140,33 @@
 	amount = 5
 	heal_amt = 2
 
+//Grown foods
+/obj/item/weapon/reagent_containers/food/snacks/grown/ //New subclass so we can pass on values
+	var/seed = null
+	var/plantname = ""
+	var/productname = ""
+	var/species = ""
+	var/lifespan = 0
+	var/endurance = 0
+	var/maturation = 0
+	var/production = 0
+	var/yield = 0
+	var/potency = -1
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/berries
+	name = "berries"
+	desc = "Nutritious!"
+	icon_state = "berrypile"
+	amount = 1
+	heal_amt = 5
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/chili
+	name = "chili"
+	desc = "Spicy!"
+	icon_state = "spice"
+	amount = 1
+	heal_amt = 5
+
 //Drinks
 /obj/item/weapon/reagent_containers/food/drinks/coffee
 	name = "Robust Coffee"

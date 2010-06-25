@@ -574,8 +574,8 @@
 	name = "Seed Vendor"
 	desc = "Vends seeds."
 	icon_state = "generic"
-	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/eggplantseed"
-	product_amounts = "10;10"
+	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/berryseed;/obj/item/nutrient/ez;/obj/item/nutrient/l4z;/obj/item/nutrient/rh"
+	product_amounts = "10;10;10;10;10"
 	product_slogans = "Grow bigger veg! Only with Veg-B-Big!"
 	product_hidden = ""
 
@@ -641,19 +641,3 @@
 	var/dirty = 0 // Does it need cleaning?
 	var/gibtime = 40 // Time from starting until meat appears
 	var/mob/occupant // Mob who has been put inside
-
-/obj/machinery/hydroponics
-	name = "Hydroponics Tray"
-	icon = 'hydroponics.dmi'
-	icon_state = "hydrotray"
-	density = 1
-	anchored = 1
-	var/active = 0 // Is it active?
-	var/waterlevel = 0 // The amount of water in the tray (max 100)
-	var/nutrilevel = 0 // The amount of nutrient in the tray (max 10)
-	var/growthcycle = 0 // Current growth cycle
-	var/b_amount = 0 //Temp value
-	var/lastcycle = 0 //Used for timing of cycles.
-	var/cycledelay = 100 // About 10 seconds / cycle
-	var/planted = 0 // Is it occupied?
-	var/obj/item/seeds/myseed = null // The currently planted seed
