@@ -15,6 +15,7 @@ var/list/occupations = list(
 	"AI",
 	"Barman",
 	"Chef",
+	"Botanist","Botanist","Botanist",
 	"Janitor",
 	"Clown",
 	"Chemist",

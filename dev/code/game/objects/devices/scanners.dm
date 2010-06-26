@@ -227,3 +227,37 @@ GAS ANALYZER
 
 	src.add_fingerprint(user)
 	return
+
+/obj/item/device/seed_scanner/afterattack(atom/A as mob|obj|turf|area, mob/user as mob)
+
+	if (istype(A, /obj/item/seeds/))
+		user << "\blue you scan the [A.name]"
+		var/obj/item/seeds/S = A
+		src.analyse(S,user)
+	else if (istype(A, /obj/machinery/hydroponics))
+		user << "\blue you scan the contents of the [A.name]"
+		var/obj/machinery/hydroponics/H = A
+		if(H.planted && !H.dead)
+			src.analyse(H.myseed,user)
+		else
+			user << "\red This hydroponics tray does not contain a live specimen"
+	return
+
+/obj/item/device/seed_scanner/attackby(obj/item/O as obj, mob/user as mob)
+
+	if (istype(O, /obj/item/seeds/))
+		user << "\blue you scan the [O.name]"
+		src.analyse(O,user)
+	return
+
+/obj/item/device/seed_scanner/proc/analyse(obj/item/seeds/S as obj , mob/user as mob)
+
+	user << "Type: [S.species]"
+	user << "Lifespan: [S.lifespan]"
+	user << "Endurance: [S.endurance]"
+	user << "Maturation rate: [S.maturation]"
+	user << "Production rate: [S.production]"
+	user << "Yield: [S.yield]"
+	if(S.potency != -1)
+		user << "Potency: [S.potency]"
+	return

@@ -142,7 +142,7 @@
 
 //Grown foods
 /obj/item/weapon/reagent_containers/food/snacks/grown/ //New subclass so we can pass on values
-	var/seed = null
+	var/seed = ""
 	var/plantname = ""
 	var/productname = ""
 	var/species = ""

@@ -4,8 +4,8 @@
 	icon_state = "hydrotray"
 	density = 1
 	anchored = 1
-	var/waterlevel = 0 // The amount of water in the tray (max 100)
-	var/nutrilevel = 0 // The amount of nutrient in the tray (max 10)
+	var/waterlevel = 100 // The amount of water in the tray (max 100)
+	var/nutrilevel = 10 // The amount of nutrient in the tray (max 10)
 	var/yieldmod = 1 //Modifier to yield
 	var/mutmod = 1 //Modifier to mutation chance
 	var/age = 0 // Current age
@@ -13,7 +13,7 @@
 	var/health = 0 // It's health.
 	var/lastproduce = 0 // Last time it was harvested
 	var/lastcycle = 0 //Used for timing of cycles.
-	var/cycledelay = 100 // About 10 seconds / cycle
+	var/cycledelay = 200 // About 10 seconds / cycle
 	var/planted = 0 // Is it occupied?
 	var/harvest = 0; //Ready to harvest?
 	var/obj/item/seeds/myseed = null // The currently planted seed
@@ -31,13 +31,26 @@ obj/machinery/hydroponics/process()
 				src.waterlevel = 0
 			if(src.waterlevel <= 0)
 				src.health -= 3
-			else if(src.waterlevel <= 10)
+			else if(src.waterlevel <= 5)
 				src.health -= 1
+			if(src.waterlevel > 10 & src.nutrilevel > 0)
+				src.health += 1
+			if(src.health > src.myseed.endurance)
+				src.health = src.myseed.endurance
+			if(src.age > src.myseed.lifespan)
+				src.health -= 5
 			if(src.health <= 0)
 				src.dead = 1
 				src.harvest = 0
 			if(src.age > src.myseed.production && (src.age - src.lastproduce) > src.myseed.production && (!src.harvest && !src.dead))
-				src.harvest = 1
+				var/m_count = 0
+				while(m_count < src.mutmod)
+					src.mutate()
+					m_count++;
+				if(src.yieldmod > 0)
+					src.harvest = 1
+				else
+					src.lastproduce = src.age
 		src.updateicon()
 	return
 
@@ -52,6 +65,7 @@ obj/machinery/hydroponics/proc/updateicon()
 		else if(src.age < src.myseed.maturation)
 			var/t_growthstate = ((src.age / src.myseed.maturation) * 6)
 			overlays += image('hydroponics.dmi', icon_state="[src.myseed.species]-grow[t_growthstate]")
+			src.lastproduce = src.age //Cheating by putting this here, it means that it isn't instantly ready to harvest
 		else
 			overlays += image('hydroponics.dmi', icon_state="[src.myseed.species]-grow6")
 
@@ -63,6 +77,40 @@ obj/machinery/hydroponics/proc/updateicon()
 			overlays += image('hydroponics.dmi', icon_state="over_lowhealth")
 		if(src.harvest)
 			overlays += image('hydroponics.dmi', icon_state="over_harvest")
+	return
+
+obj/machinery/hydroponics/proc/mutate() // Mutates the current seed
+
+	src.myseed.lifespan += rand(-2,2)
+	if(src.myseed.lifespan < 10)
+		src.myseed.lifespan = 10
+	if(src.myseed.lifespan > 30)
+		src.myseed.lifespan = 30
+
+	src.myseed.endurance += rand(-5,5)
+	if(src.myseed.endurance < 10)
+		src.myseed.endurance = 10
+	if(src.myseed.endurance > 100)
+		src.myseed.endurance = 100
+
+	src.myseed.production += rand(-1,1)
+	if(src.myseed.production < 2)
+		src.myseed.production = 2
+	if(src.myseed.production > 10)
+		src.myseed.production = 10
+
+	src.myseed.yield += rand(-2,2)
+	if(src.myseed.yield < 0)
+		src.myseed.yield = 0
+	if(src.myseed.yield > 10)
+		src.myseed.yield = 10
+
+	if(src.myseed.potency != -1) //Not all plants have a potency
+		src.myseed.potency += rand(-10,10)
+		if(src.myseed.potency < 0)
+			src.myseed.potency = 0
+		if(src.myseed.potency > 100)
+			src.myseed.potency = 100
 
 obj/machinery/hydroponics/attackby(var/obj/item/O as obj, var/mob/user as mob)
 
@@ -84,7 +132,7 @@ obj/machinery/hydroponics/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	else if ( istype(O, /obj/item/nutrient/) )
 		var/obj/item/nutrient/myNut = O
 		user.u_equip(O)
-		src.nutrilevel = 20
+		src.nutrilevel = 10
 		src.yieldmod = myNut.yieldmod
 		src.mutmod = myNut.mutmod
 		user << "You replace the nutrient solution in the tray"
@@ -104,39 +152,6 @@ obj/machinery/hydroponics/attackby(var/obj/item/O as obj, var/mob/user as mob)
 			if((user.client  && user.s_active != src))
 				user.client.screen -= O
 			O.dropped(user)
-			if(rand(1,(20 / src.mutmod)) == 1)
-				//Mutate the seed!
-				src.myseed.lifespan += rand(-2,2)
-				if(src.myseed.lifespan < 10)
-					src.myseed.lifespan = 10
-				if(src.myseed.lifespan > 30)
-					src.myseed.lifespan = 30
-
-				src.myseed.endurance += rand(-5,5)
-				if(src.myseed.endurance < 10)
-					src.myseed.endurance = 10
-				if(src.myseed.endurance > 100)
-					src.myseed.endurance = 100
-
-				src.myseed.production += rand(-1,1)
-				if(src.myseed.production < 2)
-					src.myseed.production = 2
-				if(src.myseed.production > 10)
-					src.myseed.production = 10
-
-				src.myseed.yield += rand(-2,2)
-				if(src.myseed.yield < 0)
-					src.myseed.yield = 0
-				if(src.myseed.yield > 10)
-					src.myseed.yield = 10
-
-				if(src.myseed.potency != -1) //Not all plants have a potency
-					src.myseed.potency += rand(-10,10)
-					if(src.myseed.potency < 0)
-						src.myseed.potency = 0
-					if(src.myseed.potency > 100)
-						src.myseed.potency = 100
-
 			src.updateicon()
 		else
 			user << "\red The tray already has a seed in it!"
@@ -161,27 +176,22 @@ obj/machinery/hydroponics/attackby(var/obj/item/O as obj, var/mob/user as mob)
 			t_amount++
 		src.harvest = 0
 		src.lastproduce = src.age
-		usr << text("You harvest from the [src.myseed.plantname]")
+		if((src.yieldmod * src.myseed.yield) <= 0)
+			usr << text("\red You fail to harvest anything useful")
+		else
+			usr << text("You harvest from the [src.myseed.plantname]")
 		src.updateicon()
 	else if(src.dead)
 		src.planted = 0
 		usr << text("You remove the dead plant from the tray")
 		del(src.myseed)
 		src.updateicon()
-
-/obj/machinery/hydroponics/examine()
-	set src in view()
-	..()
-	if(src.planted && !src.dead)
-		usr << text("The hydroponics tray has a [src.myseed.plantname] planted")
-		if(src.health <= (src.myseed.endurance / 2))
-			usr << text("The plant looks unhealthy")
-		if(src.harvest)
-			usr << text("The [src.myseed.plantname] is ready to harvest")
-	else if(src.dead)
-		usr << text("The [src.myseed.plantname] is dead")
 	else
-		usr << text("The hydroponics tray is empty")
-	usr << text("Water: [src.waterlevel]/100")
-	usr << text("Nutrient: [src.nutrilevel]/20")
-	return
+		if(src.planted && !src.dead)
+			usr << text("The hydroponics tray has a [src.myseed.plantname] planted")
+			if(src.health <= (src.myseed.endurance / 2))
+				usr << text("The plant looks unhealthy")
+		else
+			usr << text("The hydroponics tray is empty")
+		usr << text("Water: [src.waterlevel]/100")
+		usr << text("Nutrient: [src.nutrilevel]/10")

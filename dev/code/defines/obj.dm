@@ -256,6 +256,13 @@
 /obj/item/device
 	icon = 'device.dmi'
 
+/obj/item/device/seed_scanner
+	name = "Seed Analyser"
+	desc = "Used to analyse seeds to determine their properties"
+	icon_state = "hydro"
+	w_class = 2
+	flags = FPRINT | TABLEPASS | ONBELT | CONDUCT
+
 /obj/item/device/detective_scanner
 	name = "Scanner"
 	desc = "Used to scan objects for DNA and fingerprints"

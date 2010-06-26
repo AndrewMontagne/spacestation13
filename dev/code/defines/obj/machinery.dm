@@ -571,12 +571,21 @@
 	product_hidden = "/obj/item/weapon/reagent_containers/food/snacks/donut"
 
 /obj/machinery/vending/seed
-	name = "Seed Vendor"
+	name = "OmniCo Seeds"
 	desc = "Vends seeds."
 	icon_state = "generic"
-	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/berryseed;/obj/item/nutrient/ez;/obj/item/nutrient/l4z;/obj/item/nutrient/rh"
-	product_amounts = "10;10;10;10;10"
-	product_slogans = "Grow bigger veg! Only with Veg-B-Big!"
+	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/berryseed"
+	product_amounts = "10;10"
+	product_slogans = ""
+	product_hidden = ""
+
+/obj/machinery/vending/nutri
+	name = "NutriMatic formulas"
+	desc = "Vends nutrients."
+	icon_state = "generic"
+	product_paths = "/obj/item/nutrient/ez;/obj/item/nutrient/l4z;/obj/item/nutrient/rh"
+	product_amounts = "10;10;10"
+	product_slogans = ""
 	product_hidden = ""
 
 /obj/machinery/vending/cigarette

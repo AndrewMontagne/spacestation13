@@ -418,11 +418,12 @@
 			src.equip_if_possible(new /obj/item/clothing/gloves/latex(src), slot_gloves)
 			src.equip_if_possible(new /obj/item/weapon/storage/toolbox/mechanical(src), slot_l_hand)
 
-		if ("Hydroponist")
-			src.equip_if_possible(new /obj/item/device/pda/medical(src), slot_belt)
+		if ("Botanist")
+			src.equip_if_possible(new /obj/item/device/pda/medical(src), slot_r_store)
 			src.equip_if_possible(new /obj/item/clothing/under/rank/hydroponics(src), slot_w_uniform)
 			src.equip_if_possible(new /obj/item/clothing/shoes/black(src), slot_shoes)
 			src.equip_if_possible(new /obj/item/clothing/gloves/latex(src), slot_gloves)
+			src.equip_if_possible(new /obj/item/device/seed_scanner/, slot_belt)
 
 		if ("Quartermaster")
 			src.equip_if_possible(new /obj/item/clothing/gloves/black(src), slot_gloves)

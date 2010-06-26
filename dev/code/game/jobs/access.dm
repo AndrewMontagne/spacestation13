@@ -32,7 +32,7 @@
 	access_construction = 32
 	access_chemistry = 33
 	access_cargo_bot = 34
-
+	access_hydro = 35
 
 /obj/var/list/req_access = null
 /obj/var/req_access_txt = "0"
@@ -119,6 +119,8 @@
 			return list(access_atmospherics, access_maint_tunnels, access_emergency_storage)
 		if("Barman")
 			return list(access_bar)
+		if("Botanist")
+			return list(access_hydro)
 		if("Chemist")
 			return list(access_medical, access_tox, access_chemistry)
 		if("Janitor")

@@ -21,7 +21,7 @@
 	species = "chili"
 	plantname = "chili plant"
 	productname = "/obj/item/weapon/reagent_containers/food/snacks/grown/chili"
-	lifespan = 10
+	lifespan = 20
 	endurance = 10
 	maturation = 5
 	production = 5
@@ -35,8 +35,8 @@
 	species = "berry"
 	plantname = "berry bush"
 	productname = "/obj/item/weapon/reagent_containers/food/snacks/grown/berries"
-	lifespan = 10
+	lifespan = 20
 	endurance = 10
 	maturation = 6
 	production = 5
-	yield = 4
+	yield = 1

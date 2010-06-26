@@ -20,12 +20,12 @@
 	icon_state = "bottle18"
 	flags = FPRINT |  TABLEPASS
 	mutmod = 2
-	yieldmod = 1
+	yieldmod = 0
 
 /obj/item/nutrient/rh
 	name = "Robust Harvest"
 	icon = 'chemical.dmi'
 	icon_state = "bottle15"
 	flags = FPRINT |  TABLEPASS
-	mutmod = 1
+	mutmod = 0
 	yieldmod = 2
