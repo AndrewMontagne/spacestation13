@@ -66,3 +66,4 @@
 	maturation = 4
 	production = 4
 	yield = 4
+	potency = 0

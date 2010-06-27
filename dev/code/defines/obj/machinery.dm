@@ -575,7 +575,7 @@
 	desc = "When you need seeds fast!"
 	icon_state = "generic"
 	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/berryseed;/obj/item/seeds/eggplantseed"
-	product_amounts = "10;10"
+	product_amounts = "10;10;10"
 	product_slogans = ""
 	product_hidden = ""
 
