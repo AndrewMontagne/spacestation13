@@ -572,16 +572,16 @@
 
 /obj/machinery/vending/seed
 	name = "OmniCo Seeds"
-	desc = "Vends seeds."
+	desc = "When you need seeds fast!"
 	icon_state = "generic"
-	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/berryseed"
+	product_paths = "/obj/item/seeds/chiliseed;/obj/item/seeds/berryseed;/obj/item/seeds/eggplantseed"
 	product_amounts = "10;10"
 	product_slogans = ""
 	product_hidden = ""
 
 /obj/machinery/vending/nutri
 	name = "NutriMatic formulas"
-	desc = "Vends nutrients."
+	desc = "Vends products plants crave!"
 	icon_state = "generic"
 	product_paths = "/obj/item/nutrient/ez;/obj/item/nutrient/l4z;/obj/item/nutrient/rh"
 	product_amounts = "10;10;10"

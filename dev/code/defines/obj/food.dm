@@ -157,14 +157,21 @@
 	name = "berries"
 	desc = "Nutritious!"
 	icon_state = "berrypile"
-	amount = 1
+	amount = 2
 	heal_amt = 5
 
 /obj/item/weapon/reagent_containers/food/snacks/grown/chili
 	name = "chili"
 	desc = "Spicy!"
-	icon_state = "spice"
+	icon_state = "chilipepper"
 	amount = 1
+	heal_amt = 5
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/eggplant
+	name = "eggplant"
+	desc = "Yum!"
+	icon_state = "eggplant"
+	amount = 2
 	heal_amt = 5
 
 //Drinks

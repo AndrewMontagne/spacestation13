@@ -394,6 +394,10 @@
 	name = "Engine Launcher Room"
 	icon_state = "engine_monitoring"
 
+/area/hydroponics
+	name = "Hydroponics"
+	icon_state = "hydroponics"
+
 
 /area/teleporter
 	name = "Teleporter"
