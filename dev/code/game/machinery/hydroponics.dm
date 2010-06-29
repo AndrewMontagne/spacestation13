@@ -183,6 +183,7 @@ obj/machinery/hydroponics/attackby(var/obj/item/O as obj, var/mob/user as mob)
 		src.updateicon()
 	else if(src.dead)
 		src.planted = 0
+		src.dead = 0
 		usr << text("You remove the dead plant from the tray")
 		del(src.myseed)
 		src.updateicon()
