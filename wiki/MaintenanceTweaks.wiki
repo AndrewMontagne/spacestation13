@@ -13,6 +13,11 @@ List of things requiring tweaks, fixes, or general improvements:
   * Determine if there's a need for a messaging PDA module
   * Determine if there's a need for a quartermaster PDA module
 
+  * Chef PDA
+  * "Chef MixMaster 9000"
+  * Should contain a text file with a lot of the recipes
+  * Some recipes should stay SECRET though.
+
 
 Please add any additional points to this document, especially when finding notes in code that resemble the following:
   //To-do: new engine monitor, maybe new messaging, new signaler cart??
