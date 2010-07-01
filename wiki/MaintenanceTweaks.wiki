@@ -1,0 +1,34 @@
+#summary Maintenance and Tweaks to round out and generally improve the SS13 base.
+
+= Introduction =
+
+So far, there are a small handful of things that could be tweaked or improved upon.  This page is intended to be a place to throw any found or created "Fix this later" code.  Keep an eye out for comments in code that indicate that something is missing, and please add them in this page for reference and tracking.
+
+
+= Details =
+
+List of things requiring tweaks, fixes, or general improvements:
+  * Engineering PDA module.
+  * Bypassing glass doors.
+  * Determine if there's a need for a messaging PDA module
+  * Determine if there's a need for a quartermaster PDA module
+
+
+Please add any additional points to this document, especially when finding notes in code that resemble the following:
+  //To-do: new engine monitor, maybe new messaging, new signaler cart??
+  //also quartermaster pda I guess
+
+
+= Engineering PDA Module =
+
+This comes from a gap in the PDA module code, where the Engine Monitor does *nothing*.  Seeing as the station currently does NOT have any "engines" for mobility sake, I'm intending to move the Engine Monitoring code over to "Power Monitoring", which should provide monitoring of the Solar Panels and any future reactors that get used. 
+
+
+= Bypassing glass doors =
+
+Caig pointed out that the glass doors cannot be bypassed at this time.  Seems simple to me - I'll try to pull over code from reinforced glass, and allow glass doors to be shattered if struck enough.  This would permanently lock the door into an "open" state.
+
+
+= Determining need... =
+
+There's a few comments in the PDA code for a need for messaging and Quartermaster modules.  At a glance, there is a quartermaster module, and I'm not positive messaging is particularly critical, but we can come back to this and figure out what to do with it.
