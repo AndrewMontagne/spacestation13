@@ -108,13 +108,13 @@
 		if("Head of Security")
 			return list(access_medical, access_morgue, access_tox, access_tox_storage, access_chemistry, access_medlab,
 			            access_teleporter, access_heads, access_tech_storage, access_security, access_brig, access_atmospherics,
-			            access_maint_tunnels, access_bar, access_janitor, access_kitchen, access_robotics, access_armory)
+			            access_maint_tunnels, access_bar, access_janitor, access_kitchen, access_robotics, access_armory, access_hydro)
 		if("Head of Personnel")
 			return list(access_security, access_brig, access_forensics_lockers,
 			            access_tox, access_tox_storage, access_chemistry, access_medical, access_medlab, access_engine,
 			            access_emergency_storage, access_change_ids, access_ai_upload, access_eva, access_heads,
 			            access_all_personal_lockers, access_tech_storage, access_maint_tunnels, access_bar, access_janitor,
-			            access_crematorium, access_kitchen, access_robotics, access_cargo, access_cargo_bot)
+			            access_crematorium, access_kitchen, access_robotics, access_cargo, access_cargo_bot, access_hydro)
 		if("Atmospheric Technician")
 			return list(access_atmospherics, access_maint_tunnels, access_emergency_storage)
 		if("Barman")
@@ -152,7 +152,7 @@
 	            access_external_airlocks, access_emergency_storage, access_change_ids, access_ai_upload,
 	            access_teleporter, access_eva, access_heads, access_captain, access_all_personal_lockers,
 	            access_tech_storage, access_chapel_office, access_atmospherics, access_kitchen,
-	            access_bar, access_janitor, access_crematorium, access_robotics, access_cargo, access_cargo_bot, access_construction)
+	            access_bar, access_janitor, access_crematorium, access_robotics, access_cargo, access_cargo_bot, access_construction, access_hydro)
 
 /proc/get_access_desc(A)
 	switch(A)

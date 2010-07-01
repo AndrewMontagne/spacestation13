@@ -650,3 +650,19 @@
 	var/dirty = 0 // Does it need cleaning?
 	var/gibtime = 40 // Time from starting until meat appears
 	var/mob/occupant // Mob who has been put inside
+
+/obj/machinery/blender
+	name = "Blender"
+	desc = "Blends ingredients together"
+	icon = 'kitchen.dmi'
+	icon_state = "blender"
+	density = 1
+	anchored = 1
+
+/obj/machinery/oven
+	name = "Oven"
+	desc = "Cooks things, birdbrain"
+	icon = 'kitchen.dmi'
+	icon_state = "oven"
+	density = 1
+	anchored = 1
