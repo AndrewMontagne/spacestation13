@@ -64,7 +64,7 @@ obj/machinery/hydroponics/proc/updateicon()
 			overlays += image('hydroponics.dmi', icon_state="[src.myseed.species]-harvest")
 		else if(src.age < src.myseed.maturation)
 			var/t_growthstate = ((src.age / src.myseed.maturation) * 6)
-			overlays += image('hydroponics.dmi', icon_state="[src.myseed.species]-grow[t_growthstate]")
+			overlays += image('hydroponics.dmi', icon_state="[src.myseed.species]-grow[round(t_growthstate)]")
 			src.lastproduce = src.age //Cheating by putting this here, it means that it isn't instantly ready to harvest
 		else
 			overlays += image('hydroponics.dmi', icon_state="[src.myseed.species]-grow6")
@@ -180,6 +180,9 @@ obj/machinery/hydroponics/attackby(var/obj/item/O as obj, var/mob/user as mob)
 			usr << text("\red You fail to harvest anything useful")
 		else
 			usr << text("You harvest from the [src.myseed.plantname]")
+			if(src.myseed.oneharvest)
+				src.planted = 0
+				src.dead = 0
 		src.updateicon()
 	else if(src.dead)
 		src.planted = 0

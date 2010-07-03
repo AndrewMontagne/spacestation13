@@ -12,6 +12,7 @@
 	var/maturation = 0
 	var/production = 0
 	var/yield = 0
+	var/oneharvest = 0
 	var/potency = -1
 
 /obj/item/seeds/chiliseed
@@ -54,6 +55,19 @@
 	production = 6
 	yield = 2
 
+/obj/item/seeds/tomatoseed
+	name = "tomato seeds"
+	icon_state = "seed-tomato"
+	mypath = "/obj/item/seeds/tomatoseed"
+	species = "tomato"
+	plantname = "tomato plant"
+	productname = "/obj/item/weapon/reagent_containers/food/snacks/grown/tomato"
+	lifespan = 25
+	endurance = 15
+	maturation = 6
+	production = 6
+	yield = 2
+
 /obj/item/seeds/icepepperseed
 	name = "ice pepper seeds"
 	icon_state = "seed-icepepper"
@@ -67,3 +81,32 @@
 	production = 4
 	yield = 4
 	potency = 0
+
+/obj/item/seeds/soyaseed
+	name = "soybean seeds"
+	icon_state = "seed-soybean"
+	mypath = "/obj/item/seeds/soyaseed"
+	species = "soybean"
+	plantname = "soybean plant"
+	productname = "/obj/item/weapon/reagent_containers/food/snacks/grown/soybeans"
+	lifespan = 25
+	endurance = 15
+	maturation = 4
+	production = 4
+	yield = 3
+	potency = 0
+
+/obj/item/seeds/wheatseed
+	name = "wheat seeds"
+	icon_state = "seed-wheat"
+	mypath = "/obj/item/seeds/wheatseed"
+	species = "wheat"
+	plantname = "wheat stalks"
+	productname = "/obj/item/weapon/reagent_containers/food/snacks/grown/wheat"
+	lifespan = 25
+	endurance = 15
+	maturation = 6
+	production = 1
+	yield = 4
+	potency = 0
+	oneharvest = 1

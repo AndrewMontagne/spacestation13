@@ -612,6 +612,12 @@
 	icon = 'food.dmi'
 	icon_state = null
 	var/amount = 3
+	var/eatsound = 'eatfood.ogg'
+	var/eatsentence = "You take a bite of the"
+	var/finsentence = "You finish eating"
+	var/attemptfeedother = "attempts to feed"
+	var/feedsother = "feeds"
+	var/feedsotherfin = "finishes eating"
 	heal_amt = 1
 
 	New()
@@ -630,7 +636,7 @@
 			return 0
 		if(istype(M, /mob/living/carbon/human))
 			if(M == user)
-				M << "\blue You take a bite of [src]."
+				M << "\blue [src.eatsentence] [src]."
 				if(reagents.total_volume)
 					reagents.reaction(M, INGEST)
 					spawn(5)
@@ -639,17 +645,17 @@
 				M.nutrition += src.heal_amt * 10
 				M.poo += 0.1
 				src.heal(M)
-				playsound(M.loc,'eatfood.ogg', rand(10,50), 1)
+				playsound(M.loc,src.eatsound, rand(10,50), 1)
 				if(!src.amount)
-					user << "\red You finish eating [src]."
+					user << "\red [src.finsentence] [src]."
 					del(src)
 				return 1
 			else
 				for(var/mob/O in viewers(world.view, user))
-					O.show_message("\red [user] attempts to feed [M] [src].", 1)
+					O.show_message("\red [user] [src.attemptfeedother] [M] [src].", 1)
 				if(!do_mob(user, M)) return
 				for(var/mob/O in viewers(world.view, user))
-					O.show_message("\red [user] feeds [M] [src].", 1)
+					O.show_message("\red [user] [src.feedsother] [M] [src].", 1)
 
 				if(reagents.total_volume)
 					reagents.reaction(M, INGEST)
@@ -659,9 +665,9 @@
 				M.nutrition += src.heal_amt * 10
 				M.poo += 0.1
 				src.heal(M)
-				playsound(M.loc, 'eatfood.ogg', rand(10,50), 1)
+				playsound(M.loc, src.eatsound, rand(10,50), 1)
 				if(!src.amount)
-					user << "\red [M] finishes eating [src]."
+					user << "\red [M] [src.feedsotherfin] [src]."
 					del(src)
 				return 1
 
