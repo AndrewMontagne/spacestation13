@@ -9,14 +9,25 @@ What I'm hoping to create is a system where researchers can analyze objects and 
 
 = Details =
 
+*Job Changes*
+  * Right now, a max of 3 scientists and 1 chemist spawn on the station. This will change to 5-7 Researchers, depending on how testing of the larger Research area and in-depth research systems.
+  * Researcher uniform will be the white labcoat with black bars across the sleeves, and a pair of goggles.
+
 *Area Changes*
-  * The Toxins area will be rebuilt and renamed to Research Lab. Current plans are to enlarge it even more, and have it set up as separate rooms which can be sealed off, so that an accident in one room does not break everything.
+  * The Toxins area will be rebuilt and renamed to Science area. Current plans are to enlarge it even more, and have it set up as separate rooms which can be sealed off, so that an accident in one room does not break everything.
   * The lab will be split into areas :
     * *Research Labs*
       * Chemistry Lab
-      * Materials Lab
-      * Thermal Lab
-      * (Unknown lab type)
+      * Physical Science Lab
+      * Plasma Lab
+      * Bioscience Lab
     * *Storage*
       * Gas Storage
       * Monkey Storage
+      * Equipment Storage
+    * *Secured Asteroid Airlock*
+    * *Head of Research Office*
+
+*Research System*
+  * The original idea behind SS13 was that it was a research station. Not much research goes on anymore, so this will change that, and still add to the already present insanity.
+  * Researcher equipment can analyze various objects from the station and create research data that can be used in creating new items. Each item would have a list of attributes associated with it, but only one or two 'extractions' can be done on each item.
