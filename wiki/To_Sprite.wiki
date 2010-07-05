@@ -1,0 +1,44 @@
+#summary Objects that need to be sprited.
+
+= Introduction =
+
+Add to the list of items that need to be sprited before they can be added to the game.
+
+Mark sprited items with a *~FINISHED~* suffix.
+
+= Details =
+
+  * *BAR*
+    * Alcohol Tap / Alcohol Rack (for bar)
+    * Mixed Drink glasses
+    * Alcohol Bottles
+      * Clear
+      * Translucent Red
+      * Translucent Green
+      * Translucent Amber
+      * White/Milky
+
+  * *KITCHEN*
+    * Dough
+    * Small Cake
+    * Large Cake
+
+  * *RESEARCH*
+    * Research Labcoat (White bottom trim)
+    * Head of Research Labcoat (White bottom trim and black arm bands)
+    * Blue Tinted Goggles
+    * Purple Tinted Goggles
+    * Research Analysis Machine
+    * Research Plan
+      * Weapon Plan
+      * Armor Plan
+      * Clothing Plan
+      * Device Plan
+      * Food Plan
+
+  * *WELDER MODE*
+    * Welder Costume
+
+  * *MONKEY CULT MODE*
+    * Head Cultist Robe
+    * Monkeythulu
