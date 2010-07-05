@@ -32,14 +32,16 @@ What I'm hoping to create is a system where researchers can analyze objects and 
 
 *Research System*
   * The original idea behind SS13 was that it was a research station. Not much research goes on anymore, so this will change that, and still add to the already present insanity.
-
+  * Research Plans are generated from the Research Analysis Machine by analyzing various station objects.
+  * To construct the researched item, a player must hold the item and click on the plans to add the item to it.
+  * If all items are added to the Research Plan, the item is created.
 *New Researcher Equipment*
   * *Large Equipment*
-    * *Research Analysis Master* 
+    * *Research Analysis Machine* 
       * Items may be inserted into the machine to have the machine discover a new 'Research Plan' that contains that item. Procedure is as follows : 
-        * *Step 1* : Place item into RAM.
-        * *Step 2* : "Analyzing Object..." Device waits 30 seconds before proceeding.
-        * *Step 3* : Check to see if item is used in any research plans. If it is, roll a 1d4
+        # Place item into RAM.
+        # "Analyzing Object..." Device waits 30 seconds before proceeding.
+        # Check to see if item is used in any research plans. If it isn't, eject item with : "Research Error, choose different item." If it is, roll a 1d4 : 
           * *4 : Full Success* : "Research complete. Research Plan printed out and item returned." Select and create one of the Research Plans the item is a component of. Also 'eject' the analyzed item.
           * *3 : Half Success* : "Research complete. Research Plan printed out. Item destroyed in analysis."
           * *2 : Half Fail* : "Research inconclusive. Item returned."
