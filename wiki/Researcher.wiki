@@ -10,8 +10,10 @@ What I'm hoping to create is a system where researchers can analyze objects and 
 = Details =
 
 *Job Changes*
-  * Right now, a max of 3 scientists and 1 chemist spawn on the station. This will change to 5-7 Researchers, depending on how testing of the larger Research area and in-depth research systems.
-  * Researcher uniform will be the white labcoat with black bars across the sleeves, and a pair of goggles.
+  * Right now, a max of 3 scientists and 1 chemist spawn on the station. This will change to 5-7 Researchers, depending on how testing of the larger Research area and in-depth research systems go.
+  * Researcher Uniform
+    * *Standard* : White labcoat with black bottom trim. Blue goggles.
+    * *Head* : Added black bars around sleeves. Purple goggles.
 
 *Area Changes*
   * The Toxins area will be rebuilt and renamed to Science area. Current plans are to enlarge it even more, and have it set up as separate rooms which can be sealed off, so that an accident in one room does not break everything.
@@ -30,4 +32,15 @@ What I'm hoping to create is a system where researchers can analyze objects and 
 
 *Research System*
   * The original idea behind SS13 was that it was a research station. Not much research goes on anymore, so this will change that, and still add to the already present insanity.
-  * Researcher equipment can analyze various objects from the station and create research data that can be used in creating new items. Each item would have a list of attributes associated with it, but only one or two 'extractions' can be done on each item.
+
+*New Researcher Equipment*
+  * *Large Equipment*
+    * *Research Analysis Master* 
+      * Items may be inserted into the machine to have the machine discover a new 'Research Plan' that contains that item. Procedure is as follows : 
+        * *Step 1* : Place item into RAM.
+        * *Step 2* : "Analyzing Object..." Device waits 30 seconds before proceeding.
+        * *Step 3* : Check to see if item is used in any research plans. If it is, roll a 1d4
+          * *4 : Full Success* : "Research complete. Research Plan printed out and item returned." Select and create one of the Research Plans the item is a component of. Also 'eject' the analyzed item.
+          * *3 : Half Success* : "Research complete. Research Plan printed out. Item destroyed in analysis."
+          * *2 : Half Fail* : "Research inconclusive. Item returned."
+          * *1 : Full Fail* : "Research inconclusive. Item destroyed in analysis."
