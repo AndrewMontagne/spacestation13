@@ -24,6 +24,21 @@ Please add any additional points to this document, especially when finding notes
   //also quartermaster pda I guess
 
 
+ == Engineering PDA Module ==
+
+ This comes from a gap in the PDA module code, where the Engine Monitor does *nothing*.  Seeing as the station currently does NOT have any "engines" for mobility sake, I'm intending to move the Engine Monitoring code over to "Power Monitoring", which should provide monitoring of the Solar Panels and any future reactors that get used. 
+
+
+ == Bypassing glass doors ==
+
+ Caig pointed out that the glass doors cannot be bypassed at this time.  Seems simple to me - I'll try to pull over code from reinforced glass, and allow glass doors to be shattered if struck enough.  This would permanently lock the door into an "open" state.
+
+
+ == Determining need... ==
+
+ There's a few comments in the PDA code for a need for messaging and Quartermaster modules.  At a glance, there is a quartermaster module, and I'm not positive messaging is particularly critical, but we can come back to this and figure out what to do with it.
+
+
 = Bugs =
 
 When a bug is fixed, please strike it ~~out~~ to preserve the numbered list, so it can be referred to later if needed.
@@ -34,17 +49,3 @@ When a bug is fixed, please strike it ~~out~~ to preserve the numbered list, so 
  # Sometimes access-coded doors open and close a couple of times when you hold and run at them.
   * Never happens with glass doors. Compare code?
  # Making napalm doesn't work. The reaction does nothing.
-
-= Engineering PDA Module =
-
-This comes from a gap in the PDA module code, where the Engine Monitor does *nothing*.  Seeing as the station currently does NOT have any "engines" for mobility sake, I'm intending to move the Engine Monitoring code over to "Power Monitoring", which should provide monitoring of the Solar Panels and any future reactors that get used. 
-
-
-= Bypassing glass doors =
-
-Caig pointed out that the glass doors cannot be bypassed at this time.  Seems simple to me - I'll try to pull over code from reinforced glass, and allow glass doors to be shattered if struck enough.  This would permanently lock the door into an "open" state.
-
-
-= Determining need... =
-
-There's a few comments in the PDA code for a need for messaging and Quartermaster modules.  At a glance, there is a quartermaster module, and I'm not positive messaging is particularly critical, but we can come back to this and figure out what to do with it.
