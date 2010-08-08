@@ -1,12 +1,10 @@
-#summary Maintenance and Tweaks to round out and generally improve the SS13 base.
+#summary Maintenance, Tweaks and Bugs to fix to improve the SS13 base.
 
 = Introduction =
 
 So far, there are a small handful of things that could be tweaked or improved upon.  This page is intended to be a place to throw any found or created "Fix this later" code.  Keep an eye out for comments in code that indicate that something is missing, and please add them in this page for reference and tracking.
 
-Also, added a section for outright bugs.
-
-= Details =
+= Fixes and Tweaks =
 
 List of things requiring tweaks, fixes, or general improvements:
   * Engineering PDA module.
@@ -17,7 +15,6 @@ List of things requiring tweaks, fixes, or general improvements:
    * Should contain a text file with a lot of the recipes
    * Some recipes should stay SECRET though.
   * Make the screen update faster. For example, when lying down and you're rising up to your feet, your sprite still stays in horizontal position a long time even though you can already move around. The UI updates slow too, etc. May be that this can't be fixed and is because of BYOND.
-  * There are pre-generated metal stacks of 50 at engineering that you can pick up, but other than that you can only carry 5 metal at a time. Some sort of a change needs to be done here.
 
 Please add any additional points to this document, especially when finding notes in code that resemble the following:
   //To-do: new engine monitor, maybe new messaging, new signaler cart??
