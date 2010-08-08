@@ -17,6 +17,7 @@ List of things requiring tweaks, fixes, or general improvements:
    * Should contain a text file with a lot of the recipes
    * Some recipes should stay SECRET though.
   * Make the screen update faster. For example, when lying down and you're rising up to your feet, your sprite still stays in horizontal position a long time even though you can already move around. The UI updates slow too, etc. May be that this can't be fixed and is because of BYOND.
+  * There are pre-generated metal stacks of 50 at engineering that you can pick up, but other than that you can only carry 5 metal at a time. Some sort of a change needs to be done here.
 
 Please add any additional points to this document, especially when finding notes in code that resemble the following:
   //To-do: new engine monitor, maybe new messaging, new signaler cart??
