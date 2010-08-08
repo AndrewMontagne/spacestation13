@@ -49,3 +49,4 @@ When a bug is fixed, please strike it ~~out~~ to preserve the numbered list, so 
  # Sometimes access-coded doors open and close a couple of times when you hold and run at them.
   * Never happens with glass doors. Compare code?
  # Making napalm doesn't work. The reaction does nothing.
+ # When a door is opened with a crowbar in a power-out situation, it will blink once to the closed-door graphic after opening.
