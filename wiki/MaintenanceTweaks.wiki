@@ -4,6 +4,7 @@
 
 So far, there are a small handful of things that could be tweaked or improved upon.  This page is intended to be a place to throw any found or created "Fix this later" code.  Keep an eye out for comments in code that indicate that something is missing, and please add them in this page for reference and tracking.
 
+Also, added a section for outright bugs.
 
 = Details =
 
@@ -12,16 +13,26 @@ List of things requiring tweaks, fixes, or general improvements:
   * Bypassing glass doors.
   * Determine if there's a need for a messaging PDA module
   * Determine if there's a need for a quartermaster PDA module
-
   * Chef PDA module "Chef MixMasta 9000"
-  * Should contain a text file with a lot of the recipes
-  * Some recipes should stay SECRET though.
-
+   * Should contain a text file with a lot of the recipes
+   * Some recipes should stay SECRET though.
+  * Make the screen update faster. For example, when lying down and you're rising up to your feet, your sprite still stays in horizontal position a long time even though you can already move around. The UI updates slow too, etc. May be that this can't be fixed and is because of BYOND.
 
 Please add any additional points to this document, especially when finding notes in code that resemble the following:
   //To-do: new engine monitor, maybe new messaging, new signaler cart??
   //also quartermaster pda I guess
 
+
+= Bugs =
+
+When a bug is fixed, please strike it ~~out~~ to preserve the numbered list, so it can be referred to later if needed.
+
+ # Sometimes the rightmost "+" button goes unresponsive in Air Scrubbers' target pressure, even when not maxed out. Other buttons work.
+  * Suspected reason: Someone else has been using it before you.
+ # Incendiary grenades do nothing when they explode.
+ # Sometimes access-coded doors open and close a couple of times when you hold and run at them.
+  * Never happens with glass doors. Compare code?
+ # Making napalm doesn't work. The reaction does nothing.
 
 = Engineering PDA Module =
 
