@@ -11,12 +11,16 @@ Mark sprited items with a *~FINISHED~* suffix.
   * *BAR*
     * Alcohol Tap / Alcohol Rack (for bar)
     * Mixed Drink glasses
-    * Alcohol Bottles
-      * Clear
-      * Translucent Red
-      * Translucent Green
-      * Translucent Amber
-      * White/Milky
+    * Drink Mixer *~FINISHED~*
+    * Shot glass *~FINISHED~*
+    * Alcohol Bottles *~FINISHED~*
+      * Clear *~FINISHED~*
+      * Translucent Red *~FINISHED~*
+      * Translucent Green *~FINISHED~*
+      * Translucent Blue *~FINISHED~*
+      * ~~Translucent Amber~~
+      * White/Milky *~FINISHED~*
+      * Empty *~FINISHED~*
 
   * *KITCHEN*
     * Dough
