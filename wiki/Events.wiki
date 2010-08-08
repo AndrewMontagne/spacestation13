@@ -29,3 +29,5 @@ Personally, I want to direct the game to a more cooperative direction with event
  * Some floor tiles are monsters.
 
  * Some canisters would rupture at random.
+
+ * Players become immune to medicine. Only way to heal is through food. Botany!
