@@ -57,8 +57,11 @@ Mutations have a chance of happening when the seed is planted, and effect all re
 
 *Nutrient Solutions* : Each solution is good for 10 growth cycles.
   * *E-Z-Nutrient* : The basic solution, has 0 modifiers across the board.
+   * With a dead plant, chance to grow any mushrooms.
   * *Left 4 Zed* : Doubles the chance of a mutation at the cost of yield and potency chance.
-  * *Robust Harvest* : Doubles maximum 
+   * With a dead plant, more likely to grow deadly mushrooms.
+  * *Robust Harvest* : Doubles maximum
+   * With a dead plant, more likely to grow psilocybins. 
 
 *Growth Cycle* : Each growth cycle is about 10 seconds in game.
   # If the seed was just planted, tick its growth indicator.
@@ -87,3 +90,42 @@ Each seed and plant should preferably be named the following :
     * These 6 represent the 'maximum' number of grow stages for a plant.
   * *Harvest Ready* : (plant)-harvest
   * *Dead* : (plant)-dead
+
+== Weeds and Mushrooms ==
+
+If a plant has died in a tank, but still has water, there's a chance weeds will begin to grow. If a plant has died and still has nutrition, mushrooms may start to grow based on the nutrients. If there's water, nutrients and a dead plant, chance is that either will begin to grow in the tank, but not both. After something is growing, you can add water or nutrients to make it grow better. Weeds or mushrooms, however, do not _require_ water or nutrients after they begin growing, but will grow very slow.
+
+*Weeds*
+
+ * *Weeds*: Your typical, annoying weeds. Larger they grow, longer it will take to remove them.
+  * Will start to grow twice as often than other types of weeds.
+ * *Kudzu*: After it has grown to full size, it will start to expand on the tanks and tiles around it.
+  * Moving through kudzu is slow. Most efficiently removed with welder, fire or cleaning grenades.
+  * Removed kudzu can give a sprout that will live for a few moments. If you plant it elsewhere warm enough (+40 C?) it will grow again, even on tiles.
+ * *Nettles*: Acid coated plants. If not handled without gloves, they will cause mild burn damage. 
+  * More potent nettles do more damage. Maxed out nettles can stun people. 
+  * Can be boiled with water in an oven, after blending, to make healing nettle soup. More potent nettles heal more. Microwaved soup heals less.
+  * Can mutate to expand like kudzu.
+  * Can mutate into black *Death Nettles*, which burn and stun like hell.
+
+*Mushrooms*
+
+ * *Fly Amanita*: _Amanita muscaria_: Red with white spots, poisonous. If consumed, deals damage.
+  * Can be replanted for potency. More potent Fly Amanitas deal more damage. Toxins need to be countered with Anti-Toxins and Spaceacillin.
+  * Can be added to food. Unless boiled, will cause damage. However heating removes psychedelic effects.
+  * Mild hallucinogenic effects.
+  * Attracts flies. You can hear buzzing near them.
+  * Extraction may yield little α-amanitin (poison) or little psilocybin (hallucinogen).
+  * Can mutate into yellow or green amanitas.
+ * *Destroying Angel*: _Amanita Virosa_: White, slimmer version of Death Caps. Much more poisonous. Possibly kills if eaten.
+  * Max potency Destroying Angel will kill for certain if eaten. Less effect if added to food.
+  * Little or medium amount of α-amanitin can be extracted from these mushrooms, which is a liver destroying toxin. 
+  * Toxic effects can be negated with a high dosage of Spaceacillin and anti-toxins.
+ * *Chanterelle*: _Cantharellus Cibarius_: Small, yellow, tasty mushroom. Can be eaten raw. Heals more after cooking.
+  * Has anti-toxin effects and helps curing hangover.
+ * *Liberty Cap*: _Psilocybe Semilanceata_: A kind of small, plentiful magic mushroom. Medium hallucinogenic effects.
+  * Extraction may yield little or medium amount of psilocybin.
+  * Can be bred for potency.
+ * *Flying Saucers*: _Psilocybe Azurescens_: Very potent magic mushroom, but rarer than other mushroom types. High hallucinogenic effects.
+  * Extraction can yield little, medium or high amount of psilocybin.
+  * Can be bred for potency. High potency Saucers will drive you stark raving mad.
