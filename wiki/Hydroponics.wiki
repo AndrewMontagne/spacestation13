@@ -126,6 +126,8 @@ If a plant has died in a tank, but still has water, there's a chance weeds will 
  * *Liberty Cap*: _Psilocybe Semilanceata_: A kind of small, plentiful magic mushroom. Medium hallucinogenic effects.
   * Extraction may yield little or medium amount of psilocybin.
   * Can be bred for potency.
- * *Flying Saucers*: _Psilocybe Azurescens_: Very potent magic mushroom, but rarer than other mushroom types. High hallucinogenic effects.
-  * Extraction can yield little, medium or high amount of psilocybin.
-  * Can be bred for potency. High potency Saucers will drive you stark raving mad.
+  * *Tower Caps*: _Cappus Turris_: Large mushrooms originally found underground. Grows faster if not exposed to light.
+  * Construction materials can be extracted from it. Metal would be the easy way, while adding wood and things to build out of it would be the harder but more interesting way.
+ * *Plump Helmets*: _Plumus Hellmus_: Relatives to Tower Caps, also large mushrooms originally found underground. Grows faster if not exposed to light.
+  * Can be made into very filling biscuits.
+ * *Brown mold*: _Stemonitis Splendens_: Grows to adjacent tiles when exposed to heat, consuming it in the process. Growing speed isn't affected by nutrients or water, relying fully on the presence or abscence of heat.
