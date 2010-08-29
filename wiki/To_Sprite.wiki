@@ -33,31 +33,40 @@ Mark sprited items with a *~FINISHED~* suffix.
      * Harvest
    * *Mushrooms*: 
     * Fly Amanita
-     * Mycelium (Instead of seeds) (Small growth on a transparent plate)
-     * Growth Stages (3)
+     * Mycelium (Instead of seeds) (Small growth on a transparent plate) *~FINISHED~*
+     * Growth Stages (3) *~FINISHED~*
       * Yellow and Green Amanita (mutations)
-     * Dead
-     * Harvest
-    * Destroying Angel
-     * Mycelium
-     * Growth Stages (3)
-     * Dead
-     * Harvest
-    * Chanterelle
-     * Mycelium
-     * Growth Stages (3)
-     * Dead
-     * Harvest
-    * Liberty Cap
-     * Mycelium
-     * Growth Stages (3)
-     * Dead
-     * Harvest
-    * Flying Saucers
-     * Mycelium
-     * Growth Stages (3)
-     * Dead
-     * Harvest
+     * Dead *~FINISHED~*
+     * Harvest *~FINISHED~*
+    * Destroying Angel *~FINISHED~*
+     * Mycelium *~FINISHED~*
+     * Growth Stages (3) *~FINISHED~*
+     * Dead *~FINISHED~*
+     * Harvest *~FINISHED~*
+    * Chanterelle *~FINISHED~*
+     * Mycelium *~FINISHED~* 
+     * Growth Stages (3) *~FINISHED~*
+     * Dead *~FINISHED~* 
+     * Harvest *~FINISHED~* 
+    * Liberty Cap *~FINISHED~*
+     * Mycelium *~FINISHED~*
+     * Growth Stages (3) *~FINISHED~*
+     * Dead *~FINISHED~*
+     * Harvest *~FINISHED~*
+    * Brown Mold *~FINISHED~*
+     * Growth Stages (3) *~FINISHED~*
+     * Creeping Mold (3 stages) *~FINISHED~*
+     * Dead *~FINISHED~*
+    * Plump Helmet *~FINISHED~*
+     * Mycelium *~FINISHED~*
+     * Growth Stages (3) *~FINISHED~*
+     * Dead *~FINISHED~*
+     * Harvest *~FINISHED~*
+    * Tower Cap *~FINISHED~*
+     * Mycelium *~FINISHED~*
+     * Growth Stages (3) *~FINISHED~*
+     * Dead *~FINISHED~*
+     * Harvest = logs *~FINISHED~*
 
   * *BAR*
     * Alcohol Tap / Alcohol Rack (for bar)
@@ -81,6 +90,8 @@ Mark sprited items with a *~FINISHED~* suffix.
     * Chanterelle Soup
     * Mushroom Cake
     * Acid Mushroom Cake (Hallucinogenics)
+    * Xeno Meat
+    * Xeno Body (hung from spikes)
 
   * *RESEARCH*
     * Research Labcoat (White bottom trim)
